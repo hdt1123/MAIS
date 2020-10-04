@@ -76,8 +76,7 @@ while True:
                 
                 if label=='squat':
                         score=score+1
-                #elif label=='stretching arm':
-                #        stretch=stretch+1
+               
 		# draw the predicted activity on the frame
                 cv2.rectangle(frame, (0, 0), (300, 40), (0, 0, 0), -1)
                 cv2.rectangle(frame, (0, 40), (150, 80), (0, 0, 0), -1)
@@ -85,8 +84,7 @@ while True:
                 cv2.putText(frame, label, (10, 25), cv2.FONT_HERSHEY_SIMPLEX,0.8, (255, 255, 255), 2)
                 cv2.putText(frame, 'squat:', (10, 65), cv2.FONT_HERSHEY_SIMPLEX,0.6, (255, 255, 255), 2)
                 cv2.putText(frame, str(int(score/16)), (80, 65), cv2.FONT_HERSHEY_SIMPLEX,0.6, (255, 255, 255), 2)
-                #cv2.putText(frame, 'stretch:', (10, 105), cv2.FONT_HERSHEY_SIMPLEX,0.6, (255, 255, 255), 2)
-                #cv2.putText(frame, str(int(stretch/16)), (110, 105), cv2.FONT_HERSHEY_SIMPLEX,0.6, (255, 255, 255),
+                
 		# display the frame to our screen
                 cv2.imshow("Activity Recognition", frame)
                 key = cv2.waitKey(1) & 0xFF
