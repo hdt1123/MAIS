@@ -7,170 +7,171 @@
     <title>BreakMotion</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="template.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
 </head>
  
 <body id="overall">
     <header>
         <div>
-            <div id="title">Hello World</div>
+            <div id="title">BreakMotion</div>
             <div id="titlebottom">
-                China is speeding up strategic plan, standards, traffic rules, laws and regulations on accident-incurred liabilities for
-                its smart car industry, Economic Information Daily reported Thursday.
+                BreakMotion tracks body movements using motion detection technology for a minimum of 2 participants. 
+                These participants are challenged to perform an exercise task such as squatting or doing push-ups as a break from prolonged sitting. 
+                <br><br><br>The game counts how many squats, for example, each participant does and determines the winner of each round based on the higher count number. 
+                At the end of a long day or week of online meetings, one participant is declared the ultimate FitMaster and gets all the bragging rights so deservingly won.
             </div>
-            <!-- <div id="login">
-                <div>CREATE YOUR ACCOUNT</div>
-                <div>IT IS ABSOLUTELY FREE</div>
-                <div>
-                    <input type="text" placeholder="denis@getcraftwork.com">
-                    <input type="password" placeholder="Create your password">
-                    <input type="submit" value="SIGN UP">
-                </div>
-            </div> -->
         </div>
     </header>
  
     <section>
         <div id="landingpage">
-            <div>BOATLOADS OF AWESOME</div>
-            <div>Ready-made, customizable, HTML
-                <br>landing page sections</div>
-            <div id="moblie">
-                <div>
-                    <img src="image/section.png" />
-                    <h1>Mobile First</h1>
-                    <p>This scenario might have seemed more likely in the universe imagined by Aristotle and Ptolemy.</p>
-                </div>
-                <div>
-                    <img src="image/section.png" />
-                    <h1>Accessibility</h1>
-                    <p>Today they estimate as many as 500 billion billion sunlike stars, with 100 billion billion Earthlike
-                        planets.
-                    </p>
-                </div>
-                <div>
-                    <img src="image/section.png" />
-                    <h1>Fluid Typography</h1>
-                    <p>The more we learn about the universe, the more absurd it would seem if all but one of those bodies were
-                        bereft of life.</p>
-                </div>
-                <div>
-                    <img src="image/section.png" />
-                    <h1>Customization</h1>
-                    <p>Maybe humanity is still so basic and primitive that advanced civilizations don’t think we’re worth talking
-                        to.
-                    </p>
-                </div>
+            <div><br></div>
+            <div>Upload a sports video
+                <br>to display.</div>
+                    <div id="wrapper">
+                        <input id="input-left" class="upload-video-file" type='file' name="file"/>
+                        <input id="input-right" class="upload-video-file2" type='file' name="file"/>
+
+                        <div id="videowrapper">
+                            <div style="display: none;" class='video-prev'>
+                                <video id="videos" class="video-preview" controls="controls"/>
+
+                            </div>
+                            <div style="display: none;" class='video-prev2'>
+                                <video id="videos" class="video-preview2" controls="controls"/> 
+       
+                            </div>
+                        </div>
+                            
+                        <!-- <button onclick="myFunction()">Try it</button>
+                            <script>
+                                function myFunction() {
+                                document.getElementById("myText").value = "Johnny Bravo";
+                                }
+                            </script> -->
+
+
+                    <script>
+                                        $(function() {
+                        $('.upload-video-file').on('change', function(){
+                        if (isVideo($(this).val())){
+                            $('.video-preview').attr('src', URL.createObjectURL(this.files[0]));
+                            $('.video-prev').show();
+                        }
+                        else
+                        {
+                            $('.upload-video-file').val('');
+                            $('.video-prev').hide();
+                            alert("Only video files are allowed to upload.")
+                        }
+                        });
+                    });
+
+                    $(function() {
+                        $('.upload-video-file2').on('change', function(){
+                        if (isVideo($(this).val())){
+                            $('.video-preview2').attr('src', URL.createObjectURL(this.files[0]));
+                            $('.video-prev2').show();
+                        }
+                        else
+                        {
+                            $('.upload-video-file2').val('');
+                            $('.video-prev2').hide();
+                            alert("Only video files are allowed to upload.")
+                        }
+                        });
+                    });
+
+                    // If user tries to upload videos other than these extension , it will throw error.
+                    function isVideo(filename) {
+                        var ext = getExtension(filename);
+                        switch (ext.toLowerCase()) {
+                        case 'm4v':
+                        case 'avi':
+                        case 'mp4':
+                        case 'mov':
+                        case 'mpg':
+                        case 'mpeg':
+                            // etc
+                            return true;
+                        }
+                        return false;
+                    }
+
+                    function getExtension(filename) {
+                        var parts = filename.split('.');
+                        return parts[parts.length - 1];
+                    }
+                    </script>
+
+            <div id="wrapperinput">
+                <div id="text1"> Name: <input style="padding:4px" type="text" id="inputbox" value="Player1">  </div>
+                <div id="text2"> Name: <input style="padding:4px" type="text" id="inputbox2" value="Player2">  </div>
             </div>
-        </div>
-    </section>
- 
-    <section id="third">
-        <div id="supportive">
-            <div>Supportive policies for China's smart car</div>
+
+
+            </div>
+            <button id="button" onclick="myFunction()" class="squatbutton">Compare the Squats!</button>
+
+            <script>
+                function myFunction(){
+                    document.getElementById("demo").innerHTML = "Player 1 won the squat challenge! <br>Player1 : 14, Player2 : 7." ;
+                }
+            
+            </script>
             <div>
-                Fermi wasn’t the first person to ask a variant of this question about alien intelligence. But he owns it. The query is known
-                around the world as the Fermi paradox. It’s typically summarized like this: If the universe is unfathomably
-                large, the probability of intelligent alien life seems almost certain.
+                <h1 id="demo"></h1>
             </div>
-            <button>CHECK OUR FEATURES</button>
-            <button>TRY PRODUCT FOR FREE</button>
-        </div>
-        <div id="picture">
-            <img src="image/section2.png" />
-        </div>
-        <div style="clear: both;"></div>
-    </section>
- 
-    <section>
-        <div id="products">
-            <div>Try Our Awesome Products</div>
-            <div id="prointroduction">
-                <div>
-                    <img src="image/image_0003s_0001s_0000s_0000_Singleton.png" />
-                    <p>One of the most important steps in maintaining your personal brand is to stay consistent. Anytime you
-                        do anything online, you should consider how it contributes to your personal brand, said Matt Brady,
-                        founder and former CEO of career consultancy Path2Hired. </p>
-                </div>
-                <div>
-                    <img src="image/image_0003s_0001s_0001s_0000_Hero.png" />
-                    <p>This means that every time you write an article, post an update on social media or interact with your
-                        audience, you should think about the overall message you're trying to convey. Keeping your brand
-                        consistent helps you build a strong brand that others will begin to recognize, Brady said.</p>
-                </div>
-                <div>
-                    <img src="image/image_0003s_0001s_0002s_0000_Portland.png" />
-                    <p>This means that you should identify whether your personal brand will include facets of your personal
-                        life — which can further humanize your brand voice — or if you should keep your personal and professional
-                        worlds separate, Jones said.</p>
-                </div>
-            </div>
+
         </div>
     </section>
  
-    <section>
+ 
+    <section id="addsbackground">
         <div id="learn">
             <div>
-                <img src="image/image_0004s_0000s_0000s_0000_图层-3.png" />
+                <img src="image/zoom.png" />
                 <div>
-                    <p>Learn How To Improve Your Personal Business</p>
-                    <p>A strong brand is essential if you want to succeed in business, but it's also important to have a polished
-                        personal brand. Your personal brand should be a genuine, honest culmination of who you are. </p>
+                    <p style="color:white">Learn How To Take a Break Between Classes</p>
+                    <p style="color:white">Some live breakout exercises in between long study/work sessions . A good entertainment to get everybody moving. </p>
                 </div>
             </div>
             <div style="clear: both;"></div>
-            <div>
+            <!-- <div>
                 <div>
-                    <p>Choose Between Two Beautifully Designed Color Schemes</p>
-                    <p>You're likely on several different social media platforms for both personal and professional uses. But
+                    <p style="color:white">Choose Between Two Beautifully Designed Color Schemes</p>
+                    <p style="color:white">You're likely on several different social media platforms for both personal and professional uses. But
                         because you use different platforms for different things, it's important for you to be aware of your
                         privacy settings.</p>
                 </div>
-                <img src="image/image_0004s_0001s_0000s_0000_图层-4.png" />
-            </div>
+                <img src="image/zoom.png" />
+            </div> -->
         </div>
     </section>
  
     <section>
         <div id="crew">
             <div>Our Awesome Crew</div>
-            <div>Our unique online teaching style makes learning easy for everyone.Whether you are trying to land a new job, brush
-                up on your skills.</div>
+            <div></div>
             <div id="crewphoto">
-                <img src="image/crew.png" />
-                <img src="image/crew.png" />
-                <img src="image/crew.png" />
-                <img src="image/crew.png" />
+                <img src="image/yanan.JPG" />
+                <img src="image/fran.JPG" />
+                <img src="image/tanya.JPG" />
+                <img src="image/hu.PNG" />
             </div>
+            <div id="wrapper">
+                <p id="crewss">Yanan Wang</p>
+                <p id="crewss">Francisca</p>
+                <p id="crewss">Tantyana Park</p>
+                <p id="crewss">Dingtao Hu</p>
+            </div>
+
+
         </div>
     </section>
  
-    <section id="contacts">
-        <div>
-            <div>
-                <div id="fell">FELL FREE TO WRITE US</div>
-                <input type="email" id="email" placeholder="E-mail" />
-                <input type="text" id="subject" placeholder="Subject" />
-                <input type="text" id="message" placeholder="Message" />
-                <input type="submit" id="send" value="SEND" />
-            </div>
-            <div>
-                <div id="con">
-                    <p>Contacts</p>
-                    <p>Make any design your own using the Style
-                        <br/>Editor.Personalize fonts, colors, and layouts to
-                        <br/>create the custom look you want.</p>
-                    <p>
-                        <img src="image/image_0006s_0001s_0002s_0000_Map-Icon.png" />360 King Street
-                        <br/>Feastrvale Trevose, PA 19057</p>
-                    <p>
-                        <img src="image/image_0006s_0001s_0001s_0000_Phone-Icon.png" />(755)564-84-12</p>
-                    <p>
-                        <img src="image/image_0006s_0001s_0000s_0000_Mail-Icon.png" />yourname@mail.com</p>
-                </div>
-            </div>
-        </div>
-    </section>
- 
+
     <footer>
         <div>
             <div>
@@ -199,14 +200,7 @@
                 <p>Create web UI kit for designers,
                     <br/>freelancers or business.</p>
                 <p></p>
-                <p id="icon">
-                    <img src="image/image_0007s_0001s_0000s_0000_Twitter-Icon.png" />  
-                    <img src="image/image_0007s_0001s_0000s_0001_Facebook-Icon.png" />  
-                    <img src="image/image_0007s_0001s_0000s_0002_Google-Icon.png" />  
-                    <img src="image/image_0007s_0001s_0000s_0003_Tumbler-Icon.png" />  
-                    <img src="image/image_0007s_0001s_0000s_0004_Pinterest-Icon.png" />  
-                    <img src="image/image_0007s_0001s_0000s_0005_LinkedIn-Icon.png" />
-                </p>
+
             </div>
         </div>
     </footer>

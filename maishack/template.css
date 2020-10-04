@@ -7,28 +7,33 @@
     font-family: "Microsoft Yahei", sans-serif;
     font-weight: lighter;
 }
+#addsbackground{
+    background-image:url(image/back2.PNG);
+    background-size: cover;
+}
  
 header {
-    background-image: url(image/background.png);
+    background-image: url(image/11.PNG);
     color: white;
     width: 1440px;
     height: 990px;
     text-align: center;
     margin: 0 auto;
+    background-size: cover;
 }
  
 #title {
     display: inline-block;
     font-size: 64px;
-    padding-top: 200px;
+    padding-top: 75px;
     width: 960px;
 }
  
 #titlebottom {
     display: inline-block;
     box-sizing: border-box;
-    width: 960px;
-    font-size: 24px;
+    font-size: 22px;
+    width:800px;
     padding: 70px 70px 100px 70px;
 }
  
@@ -75,6 +80,7 @@ header {
 section {
     /* width: 1600px; */
     margin: 0 auto;
+    height:1000px;
     border-bottom: 1px solid rgb(200, 200, 200);
 }
  
@@ -85,9 +91,9 @@ section {
     text-align: center;
 }
  
-#landingpage div {
+/* #landingpage div {
     display: inline-block;
-}
+} */
  
 #landingpage>div:first-child {
     width: 1170px;
@@ -100,18 +106,20 @@ section {
     width: 1170px;
     height: 170px;
     font-size: 48px;
-    margin-top: 40px;
+    /* margin-top: 40px; */
 }
  
 #landingpage>div:nth-child(3) {
-    width: 1170px;
+    width: 1130px;
+    padding-top: 30px;
     height: 450px;
+    background-color: lavender;
 }
  
-#moblie div {
-    width: 420px;
-    height: 120px;
-}
+/* #moblie div {
+    width: 1000px;
+    height: 600px;
+} */
  
 #moblie div img {
     float: left;
@@ -166,6 +174,18 @@ section {
     height: 550px;
 }
  
+#button{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #008CBA;
+}
 #supportive button:nth-child(4) {
     width: 240px;
     height: 50px;
@@ -175,7 +195,24 @@ section {
     color: #ffffff;
     border: none;
 }
- 
+
+#text1{
+    float: left;
+    margin-left: 170px;
+}
+
+#text2{
+    float: left;
+    margin-left: 360px;
+
+}
+
+#wrapperinput{
+    position: absolute;
+    padding-top: 360px;
+    /* padding-left: 100px;*/
+}
+
 #products {
     width: 960px;
     height: 580px;
@@ -213,7 +250,7 @@ section {
     float: left;
     width: 320px;
     height: 240px;
-    margin-top: 150px;
+    margin-top: 100px;
 }
  
 #learn div div:nth-child(2) {
@@ -224,7 +261,7 @@ section {
 }
  
 #learn img {
-    width: 570px;
+    width: 550px;
     height: 350px;
 }
  
@@ -235,11 +272,11 @@ section {
  
 #learn img:nth-child(2) {
     float: right;
-    margin-top: 80px;
+    margin-top: 100px;
 }
  
 #learn p:first-child {
-    font: 24px bold;
+    font: 28px bold;
 }
  
 #crew {
@@ -271,12 +308,14 @@ section {
 }
  
 #crewphoto img {
-    width: 470px;
-    height: 350px;
+    zoom:20%;
 }
- 
+#crewss{
+    float: left;
+    width: 25%;
+}
 #contacts {
-    width: 1600px;
+    width: 1440px;
     height: 700px;
     margin: 0 auto;
 }
@@ -352,9 +391,38 @@ section {
 #con p:first-child {
     font-size: 48px;
 }
- 
+#wrapper{
+    margin:20px;
+}
+
+#videowrapper{
+    padding: 20px;
+}
+
+
+#input-left{
+    float: left;
+    margin-right: 250px;
+    margin-left: 190px;
+    overflow: hidden;
+}
+#input-right{
+    float:left;
+    margin-left: 70px;
+    overflow:hidden;
+}
+
+#videos{
+    width: 15%;
+    margin-right: 290px;
+    margin-left: 90px;
+    margin-top: 50px;
+    float: left;
+}
+
+
 footer {
-    width: 1600px;
+    width: 1440px;
     height: 400px;
     background-color: black;
     margin: 0 auto;
