@@ -1,6 +1,8 @@
 # MAIS
 MAIS 2020 Hackathon
 
+https://devpost.com/software/mais-hack-2020-breakmotion
+
 Implement ResNet for human motion recognition by OpenCV library and the Python programming language. The model we’re using for human activity recognition comes from Hara et al.’s 2018 CVPR paper, Can Spatiotemporal 3D CNNs Retrace the History of 2D CNNs and ImageNet?
 
 To run the code on terminal: 
